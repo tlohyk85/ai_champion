@@ -21,7 +21,7 @@ if not check_password():
 os.environ['OPENAPI_API_KEY'] = st.secrets['OPENAPI_API_KEY']
 
 def about_us():
-  st.title("About Us")
+  st.title("About Us Now")
   st.write("This application aims to empower users with information regarding the Primary Care Plan (PCP) for foreign workers in Singapore. We leverage external data sources, user input, and advanced language processing to deliver accurate and helpful insights.")
   
   st.header("Objectives")
