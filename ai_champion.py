@@ -1,7 +1,24 @@
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
 from my_script import get_completion
+from utility import check_password
+
+# region <--------- Streamlit App Configuration --------->
+st.set_page_config(
+    layout="centered",
+    page_title="My AI Champion Streamlit App"
+)
+# endregion <--------- Streamlit App Configuration --------->
+
+# Do not continue if check_password is not True.  
+if not check_password():  
+    st.stop()
+
+# endregion <--------- Streamlit Page Configuration --------->
+
+os.environ['OPENAPI_API_KEY'] = st.secrets['OPENAPI_API_KEY']
 
 def about_us():
   st.title("About Us")

@@ -8,7 +8,7 @@ import urllib3
 import tiktoken
 
 load_dotenv('.env')
-mykey= os.getenv("KEY")
+mykey= os.getenv("OPENAPI_API_KEY")
 client = OpenAI(api_key=mykey)
 
 # This is a function that send input (i.e., prompt) to LLM and receive the output from the LLM
