@@ -21,6 +21,13 @@ if not check_password():
 
 os.environ['OPENAPI_API_KEY'] = st.secrets['OPENAPI_API_KEY']
 
+expander = st.expander("Important Information")
+expander.write('''
+    IMPORTANT NOTICE: This web application is a prototype developed for educational purposes only. The information provided here is NOT intended for real-world usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters.
+    Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. You assume full responsibility for how you use any generated output.
+    Always consult with qualified professionals for accurate and personalized advice.
+            ''')
+
 def about_us():
   st.title("About Us Now")
   st.write("This application aims to empower users with information regarding the Primary Care Plan (PCP) and Work Passes for foreign workers in Singapore. We leverage external data sources, user input, and advanced language processing to deliver accurate and helpful insights.")
@@ -43,6 +50,8 @@ def about_us():
   st.header("Author")
   st.write("Tommy Loh")
 
+
+
 def methodology():
   st.title("Methodology")
   st.header("Data flows")
@@ -61,7 +70,7 @@ def methodology():
     - A ai_champion.py to create app interface, format and ordering of the pages. \n
     - Commit and push codes to GitHub, and have Streamlit create the app from GitHub files. \n
            """)
-
+  
 def primary_care_plan():
     st.title("MOM Primary Care Plan")
     # Input widget: Text area for user query
